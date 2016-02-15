@@ -4,11 +4,15 @@
 Phonebook production code
 """
 
+import os
+
 
 class Phonebook(object):
 
     def __init__(self):
         self.entries = {}
+        self.filename = 'phonebook.txt'
+        self.file_cache = open(self.filename, 'w')  # Test purpose only
 
     def add(self, name, number):
         self.entries[name] = number
@@ -19,8 +23,11 @@ class Phonebook(object):
     def get_names(self):
         return self.entries.keys()
 
+    def get_numbers(self):
+        return self.entries.values()
+
     def is_consistent(self):
-        numbers = list(self.entries.values())
+        numbers = list(self.get_numbers())
 
         for i in range(len(numbers) - 1):
             for j in range(i + 1, len(numbers)):
@@ -29,3 +36,7 @@ class Phonebook(object):
                     return False
         return True
 
+    def clear(self):
+        self.entries = {}
+        self.file_cache.close()
+        os.remove(self.filename)
