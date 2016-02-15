@@ -9,10 +9,10 @@ import os
 
 class Phonebook(object):
 
-    def __init__(self):
+    def __init__(self, cachedir):
         self.entries = {}
         self.filename = 'phonebook.txt'
-        self.file_cache = open(self.filename, 'w')  # Test purpose only
+        self.file_cache = open(os.path.join(str(cachedir) + self.filename), 'w')
 
     def add(self, name, number):
         self.entries[name] = number
