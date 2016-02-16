@@ -11,6 +11,7 @@ from phonebook import Phonebook
 
 @pytest.fixture
 def phonebook(tmpdir):
+    """Provides and empty Phonebook"""
     phonebook = Phonebook(tmpdir)
     return phonebook
 

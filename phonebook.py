@@ -11,8 +11,12 @@ class Phonebook(object):
 
     def __init__(self, cachedir):
         self.entries = {}
+        self.cachedir = str(cachedir)
         self.filename = 'phonebook.txt'
-        self.file_cache = open(os.path.join(str(cachedir) + self.filename), 'w')
+
+        if not os.path.exists(self.cachedir):
+            os.mkdir(self.cachedir)
+        self.file_cache = open(os.path.join(self.cachedir, self.filename), 'w')
 
     def add(self, name, number):
         self.entries[name] = number
@@ -39,4 +43,5 @@ class Phonebook(object):
     def clear(self):
         self.entries = {}
         self.file_cache.close()
-        os.remove(self.filename)
+        os.remove(os.path.join(self.cachedir, self.filename))
+        os.rmdir(self.cachedir)
