@@ -6,7 +6,7 @@ Yatzy doctests for unittest
 
 import unittest
 import doctest
-import yatzy.yatzy
+import yatzy
 
 
 def load_tests(loader, tests, ignore):
