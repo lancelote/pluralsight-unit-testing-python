@@ -6,7 +6,7 @@ Phonebook tests via pytest
 
 import pytest
 
-from phonebook.phonebook import Phonebook
+from unitests_and_pytest.phonebook import Phonebook
 
 
 @pytest.fixture

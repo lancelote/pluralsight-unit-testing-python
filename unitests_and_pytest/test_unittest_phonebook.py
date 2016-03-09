@@ -7,7 +7,7 @@ Phonebook testing
 
 import unittest
 
-from phonebook.phonebook import Phonebook
+from unitests_and_pytest.phonebook import Phonebook
 
 
 class PhonebookTest(unittest.TestCase):

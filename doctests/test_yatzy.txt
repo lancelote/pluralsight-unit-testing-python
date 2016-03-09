@@ -1,4 +1,4 @@
->>> from yatzy.yatzy import small_straight
+>>> from doctests.yatzy import small_straight
 >>> small_straight([1, 2, 3, 4, 5])
 15
 >>> small_straight([1, 2, 3, 4, 4])
