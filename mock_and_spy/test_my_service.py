@@ -4,7 +4,8 @@ from .my_service import MyService
 from .fake_single_sign_on_registry import (
     FakeSingleSignOnRegistry,
     MockSingleSignOnRegistry,
-    SSOToken
+    SpySingleSignOnRegistry,
+    SSOToken,
 )
 
 
@@ -42,3 +43,19 @@ class MyServiceTest(unittest.TestCase):
 
         my_service.handle_request('Do stuff', token=token)
         self.assertTrue(registry.is_valid_was_called)
+
+    def test_invalid_token_with_spy(self):
+        token = SSOToken()
+        registry = SpySingleSignOnRegistry(accept_all_tokens=False)
+        my_service = MyService(registry)
+
+        my_service.handle_request('Do stuff', token=token)
+        self.assertIn(token, registry.checked_tokens)
+
+    def test_valid_token_with_spy(self):
+        token = SSOToken()
+        registry = SpySingleSignOnRegistry(accept_all_tokens=True)
+        my_service = MyService(registry)
+
+        my_service.handle_request('Do stuff', token=token)
+        self.assertIn(token, registry.checked_tokens)
