@@ -10,6 +10,7 @@ from .fake_single_sign_on_registry import (
 )
 
 
+@unittest.skip
 class MyServiceTest(unittest.TestCase):
 
     def test_invalid_token(self):
