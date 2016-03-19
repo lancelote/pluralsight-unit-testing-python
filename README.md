@@ -10,6 +10,7 @@ by Emily Bache
 - **Mock** - is as a Stub, but additionally verifies interactions
 - **Test Spy** - lets you query afterwards to find out what happened
 - **Dummy** - is for when the interface requires an argument
+- **Monkeypatching** - changing code at runtime
 
 ## Progress
 
@@ -17,7 +18,7 @@ by Emily Bache
  - [x] Why and When Should You Write Unit Tests
  - [x] Using Pytest for Unit Testing in Python
  - [x] Testable Documentation with Doctest
- - [ ] Test Doubles: Mocks, Fakes and Stubs
+ - [x] Test Doubles: Mocks, Fakes and Stubs
  - [ ] Test Coverage and Parameterized Tests
 
 ## Unittest
