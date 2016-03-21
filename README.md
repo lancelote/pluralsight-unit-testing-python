@@ -39,3 +39,47 @@ Should be in proper folder:
 ```bash
 python -m doctest test_* -v
 ```
+
+## Test Coverage
+
+- `coverage` and `pytest-cov` packages are required
+- Add `pragma: no cover` to exclude code from coverage report
+
+### With `pytest`
+
+Terminal report:
+ ```bash
+ python -m pytest --cov-report term-missing --cov <target>
+ ```
+
+HTML report:
+```bash
+python -m pytest --cov-report html --cov <target>
+```
+
+### With `unittest`
+
+To generate report:
+```bash
+python -m coverage run -m unittest
+```
+
+To view report in terminal:
+```bash
+python -m coverage report
+```
+
+To view report in HTML:
+```bash
+python -m coverage html
+```
+
+### Coverage Branch feature
+
+- Create `.coveragerc`
+- Add - Add following code to it
+
+```
+[run]
+branch=True
+```

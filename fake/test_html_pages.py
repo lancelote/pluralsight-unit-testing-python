@@ -32,6 +32,10 @@ class HtmlPagesTest(unittest.TestCase):
         page_two = converter.get_html_page(1)
         self.assertEqual('page two<br />', page_two)
 
+    def test_nonexistent_file(self):
+        converter = HtmlPagesConverter(FileAccessWrapper('missing'))
+        self.assertEqual('', converter.get_html_page(0))
+
 
 class FakeFileWrapper(object):
 

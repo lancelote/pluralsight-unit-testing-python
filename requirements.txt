@@ -4,5 +4,7 @@
 #
 #    pip-compile requirements.in
 #
+coverage==4.0.3
 py==1.4.31                # via pytest
+pytest-cov==2.2.1
 pytest==2.8.7
