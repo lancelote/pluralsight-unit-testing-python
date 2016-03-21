@@ -19,7 +19,7 @@ by Emily Bache
  - [x] Using Pytest for Unit Testing in Python
  - [x] Testable Documentation with Doctest
  - [x] Test Doubles: Mocks, Fakes and Stubs
- - [ ] Test Coverage and Parameterized Tests
+ - [x] Test Coverage and Parameterized Tests
 
 ## Unittest
 
