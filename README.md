@@ -1,5 +1,6 @@
 [![Requirements Status](https://requires.io/github/lancelote/pluralsight-unit-testing-python/requirements.svg?branch=master)](https://requires.io/github/lancelote/pluralsight-unit-testing-python/requirements/?branch=master)
 [![Build Status](https://travis-ci.org/lancelote/pluralsight-unit-testing-python.svg)](https://travis-ci.org/lancelote/pluralsight-unit-testing-python)
+[![Coverage Status](https://coveralls.io/repos/github/lancelote/pluralsight-unit-testing-python/badge.svg?branch=master)](https://coveralls.io/github/lancelote/pluralsight-unit-testing-python?branch=master)
 
 # pluralsight-unit-testing-python
 
