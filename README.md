@@ -1,3 +1,6 @@
+[![Requirements Status](https://requires.io/github/lancelote/pluralsight-unit-testing-python/requirements.svg?branch=master)](https://requires.io/github/lancelote/pluralsight-unit-testing-python/requirements/?branch=master)
+[![Build Status](https://travis-ci.org/lancelote/pluralsight-unit-testing-python.svg)](https://travis-ci.org/lancelote/pluralsight-unit-testing-python)
+
 # pluralsight-unit-testing-python
 
 Code for pluralsight course [Unit Testing with Python](https://app.pluralsight.com/library/courses/unit-testing-python/table-of-contents)
