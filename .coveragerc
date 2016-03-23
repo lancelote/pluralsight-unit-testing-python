@@ -1,2 +1,6 @@
 [run]
-branch=True
+branch = True
+
+omit =
+    *__init__*
+    */test_*
